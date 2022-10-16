@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div id="xaxis"></div><br>
+<div id="yaxis"></div><br>
+<div id="zaxis"></div><br>
+
+
+<script type="text/javascript">
+
+
+var ax=document.getElementById("xaxis");
+var ay=document.getElementById("yaxis");
+var az=document.getElementById("zaxis");
+
+
+window.addEventListener("devicemotion",function(event){
+
+ax.innerHTML="x : "+event.accelerationIncludingGravity.x*1;
+ay.innerHTML="y : "+event.accelerationIncludingGravity.y*1;az.innerHTML="z : "+event.accelerationIncludingGravity.z*1;
+},true);
+
+
+</script>
+</body>
+</html>
